@@ -6,11 +6,33 @@ Refactored code used in the paper "Optimizing Key-Selection for Face-Based One-T
 
 ### Installation
 
+1- ```pip install tensorflow``` for ```Python 3.8.2``` or higher.
+2- ```pip install opencv-python```
+3- Download the databases used on this article.
+4- Utilise the [Adaface](https://openaccess.thecvf.com/content/CVPR2022/papers/Kim_AdaFace_Quality_Adaptive_Margin_for_Face_Recognition_CVPR_2022_paper.pdf) model as face embedding extractor. 
+5- Prepare pre-processing step on face images using the framework [deepface]
+
+```pip install deepface```
+
+6- Prepare morphing process on face images using the scripts under [morphing_opencv](https://github.com/a-tabaza/face-morphing).
+
+3- Use [define_adversarial_attack](adversarial-attack-define/iterative_optimization_with_AdaFace.py) for generating adversarial attacks. 
+
+4- For defining the optimization scheme against adversarial attacks based on key-selection strategies, run [runner-key-selection](runner-key-selection.py)
 
 Project Organization
 ------------
 
-
+    ├── LICENSE
+    ├── README.md               <- The top-level README for developers using this project.
+    ├── figures                 <- Figures for the README
+    ├── runner-key-selection    <- Define the optimization scheme
+    ├── optimization-definition <- Contain dependences of the optimization
+        ├── ...                 <- Helper Functions
+        ├── SeedGenerator       <- Contain the key-selection strategies
+    ├── morphing_opencv         <- Create morphing task using opencv
+    ├── alignment-deep-face     <- Pre-processing on face images
+    ├── adversarial-attack-define <- Execute adversarial attacks
 
 
 Paper: Optimizing Key-Selection for Face-Based One-Time Biometrics via Morphing

@@ -7,9 +7,13 @@ Refactored code used in the paper "Optimizing Key-Selection for Face-Based One-T
 ### Installation
 
 1- ```pip install tensorflow``` for ```Python 3.8.2``` or higher.
-2- ```pip install opencv-python```
+
+2- ```pip install opencv-python```.
+
 3- Download the databases used on this article.
+
 4- Utilise the [Adaface](https://openaccess.thecvf.com/content/CVPR2022/papers/Kim_AdaFace_Quality_Adaptive_Margin_for_Face_Recognition_CVPR_2022_paper.pdf) model as face embedding extractor. 
+
 5- Prepare pre-processing step on face images using the framework [deepface]
 
 ```pip install deepface```
